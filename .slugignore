@@ -1,0 +1,6 @@
+node_modules/
+.git/
+.gitignore
+.env
+Research/03-EDA.ipynb
+Research/08-DataVisualization.ipynb
