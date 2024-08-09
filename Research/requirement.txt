@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib.pyplot 
+seaborn
+WordCloud
+sklearn
+folium
+Nominatim
+tqdm
+plotly.express
+tensorflow
+streamlit
+fitz
+spacy
+pickle
