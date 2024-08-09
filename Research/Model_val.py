@@ -50,20 +50,23 @@ def extract_skills_and_points(text, skill_phrases):
     return skills, key_points
 
 # Load the vectorizer and job data
-def load_vectorizer_and_data(vectorizer_path='vectorizer.pkl', data_path='job_data.pkl'):
+def load_vectorizer_and_data(vectorizer_path='Data/vectorizer.pkl', data_path='Data/job_data.pkl'):
     with open(vectorizer_path, 'rb') as f:
         vectorizer = pickle.load(f)
     with open(data_path, 'rb') as f:
         df = pickle.load(f)
     return vectorizer, df
 
-# Define the function to recommend top 3 jobs
-def recommend_top_3(job_tags, vectorizer, df):
+# Function to recommend top 3 jobs
+def recommend_top_3(job_tags, gender, qualification, experience, vectorizer, df):
+    # Combine job tags with gender, qualification, and experience
+    combined_input = f"{job_tags}, {gender}, {qualification}, {experience}"
+
     # Step 1: Vectorize the 'tags' column using the loaded vectorizer
     tfidf_matrix = vectorizer.transform(df['tags'])
     
-    # Step 2: Vectorize the input tags
-    input_vector = vectorizer.transform([job_tags])
+    # Step 2: Vectorize the combined input
+    input_vector = vectorizer.transform([combined_input])
     
     # Step 3: Compute cosine similarity
     cosine_similarities = cosine_similarity(input_vector, tfidf_matrix).flatten()
@@ -109,47 +112,31 @@ def main():
             # Extract skills and key points from resume
             skills, key_points = extract_skills_and_points(resume_text, skill_phrases)
             st.write("Skills extracted from Resume:")
-            st.write(skills)
-            st.write("Key Points extracted from Resume:")
-            st.write(key_points)
+            st.write(list(set(skills)))
+            
+            # Input for gender
+            gender = st.selectbox("Gender", ["Male", "Female", "Other"])
+
+            # Input for highest degree
+            highest_degree = st.selectbox("Highest Degree", ["High School", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Doctorate", "Other"])
+
+            # Input for skills and experience
+            num_skills = st.number_input("Number of Skills", min_value=1, step=1, value=1)
+            skills_experience = {}
+            total_experience = 0
+            for i in range(num_skills):
+                skill = st.text_input(f"Skill {i+1}")
+                experience = st.number_input(f"Experience in years for {skill}", min_value=0, step=1, value=0)
+                skills_experience[skill] = experience
+                total_experience += experience
             
             # Use extracted skills to recommend jobs
             job_tags = ', '.join(skills)
-            recommended_jobs = recommend_top_3(job_tags, vectorizer, df)
+            recommended_jobs = recommend_top_3(job_tags, gender, highest_degree, total_experience, vectorizer, df)
             
-            st.write("Top 3 similar jobs based on extracted skills:")
+            st.write("Top 3 similar jobs based on extracted skills, qualification, and experience:")
             for job in recommended_jobs:
                 st.write(f"- {job}")
-
-    st.header("Personal Information")
-    gender = st.selectbox("Gender", ["Male", "Female", "Other"])
-
-    st.header("Education")
-    highest_degree = st.selectbox("Highest Degree", ["High School", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Doctorate", "Other"])
-
-    st.header("Skills and Experience")
-    num_skills = st.number_input("Number of Skills", min_value=1, step=1, value=1)
-    
-    skills_experience = {}
-    for i in range(num_skills):
-        skill = st.text_input(f"Skill {i+1}")
-        experience = st.number_input(f"Experience in years for {skill}", min_value=0, step=1, value=0)
-        skills_experience[skill] = experience
-    
-    if st.button("Submit"):
-        st.write("Submitted Information:")
-        st.write("Resume: Uploaded" if resume_pdf else "Resume: Not Uploaded")
-        st.write(f"Gender: {gender}")
-        st.write(f"Highest Degree: {highest_degree}")
-        st.write("Skills and Experience:")
-        st.write(skills_experience)
-
-        # Create a tags string from the skills entered
-        input_tags = ', '.join(skills_experience.keys())
-        recommended_jobs = recommend_top_3(input_tags, vectorizer, df)
-        st.write("Predicted Job Titles:")
-        for job in recommended_jobs:
-            st.write(f"- {job}")
 
 if __name__ == "__main__":
     main()

@@ -112,3 +112,244 @@ Vue.js
 Web
 Wireframing
 Writing
+Bachelor of Science in Computer Science
+Master of Business Administration
+Doctor of Medicine
+Bachelor of Arts in Psychology
+Master of Science in Data Science
+Bachelor of Engineering in Mechanical Engineering
+Doctor of Philosophy in Physics
+Bachelor of Science in Nursing
+Master of Arts in History
+Bachelor of Commerce in Accounting
+B.Sc. in CS
+MBA
+M.D.
+B.A. in Psych
+M.Sc. in DS
+B.Eng. in ME
+Ph.D. in Physics
+B.Sc. in Nursing
+M.A. in History
+B.Com. in Accounting
+Bachelor of Fine Arts
+Master of Public Health
+Doctor of Dental Surgery
+Bachelor of Science in Information Technology
+Master of Social Work
+Bachelor of Business Administration
+Doctor of Veterinary Medicine
+Bachelor of Architecture
+Master of Education
+Bachelor of Science in Biotechnology
+BFA
+MPH
+DDS
+B.Sc. in IT
+MSW
+BBA
+DVM
+B.Arch
+M.Ed.
+B.Sc. in Biotech
+B.Sc.
+Data Analysis
+Machine Learning
+Deep Learning
+Python Programming
+R Programming
+SQL
+Data Visualization
+Tableau
+Power BI
+Excel
+Data Mining
+Statistics
+Predictive Modeling
+Regression Analysis
+Classification Algorithms
+Neural Networks
+Natural Language Processing
+Computer Vision
+Time Series Analysis
+Big Data
+Hadoop
+Spark
+Data Cleaning
+Data Wrangling
+Feature Engineering
+Data Engineering
+Cloud Computing
+AWS
+Azure
+Google Cloud Platform
+Docker
+Kubernetes
+SQL Server
+NoSQL Databases
+MongoDB
+Redis
+Apache Kafka
+ETL Processes
+API Integration
+Software Development
+Agile Methodologies
+Scrum
+Kanban
+DevOps
+Continuous Integration
+Continuous Deployment
+Git
+GitHub
+GitLab
+Bitbucket
+JavaScript
+HTML
+CSS
+React
+Angular
+Vue.js
+Node.js
+RESTful APIs
+Microservices
+Backend Development
+Frontend Development
+Full-Stack Development
+Software Testing
+Unit Testing
+Integration Testing
+Performance Testing
+Security Testing
+Automation Testing
+Selenium
+JUnit
+TestNG
+JIRA
+Confluence
+Trello
+Slack
+Microsoft Office Suite
+Data Architecture
+Data Governance
+Risk Management
+Business Intelligence
+CRM Systems
+Salesforce
+ERP Systems
+SAP
+Oracle
+Statistical Analysis System (SAS)
+MATLAB
+Simulink
+TensorFlow
+Keras
+PyTorch
+Scikit-Learn
+XGBoost
+LightGBM
+CatBoost
+Hyperparameter Tuning
+Model Evaluation
+Feature Selection
+Anomaly Detection
+Clustering
+Dimensionality Reduction
+Principal Component Analysis (PCA)
+Linear Algebra
+Optimization Algorithms
+Gradient Descent
+Reinforcement Learning
+Transfer Learning
+Generative Adversarial Networks (GANs)
+Speech Recognition
+Text Generation
+Chatbots
+Image Segmentation
+Object Detection
+Face Recognition
+Augmented Reality
+Virtual Reality
+Web Scraping
+Data Privacy
+Encryption
+Compliance
+GDPR
+HIPAA
+SQL Injection Prevention
+Cross-Site Scripting (XSS)
+Vulnerability Assessment
+Penetration Testing
+Cybersecurity
+Incident Response
+Network Security
+Firewalls
+VPNs
+Ethical Hacking
+Risk Assessment
+Incident Management
+Service Management
+ITIL
+Configuration Management
+Change Management
+Problem Management
+Asset Management
+IT Support
+Technical Writing
+Documentation
+User Training
+Customer Support
+Troubleshooting
+Network Administration
+System Administration
+Database Administration
+Cloud Administration
+Performance Tuning
+System Optimization
+Backup and Recovery
+Disaster Recovery
+Data Storage Solutions
+File Systems
+Storage Area Networks (SAN)
+Network Attached Storage (NAS)
+High Availability
+Load Balancing
+Traffic Management
+Web Development
+Mobile App Development
+iOS Development
+Android Development
+Swift
+Kotlin
+Java
+Objective-C
+UX/UI Design
+Graphic Design
+User Experience Research
+User Interface Design
+Prototyping
+Wireframing
+Usability Testing
+A/B Testing
+Interaction Design
+Human-Computer Interaction
+Agile UX
+Design Thinking
+Product Management
+Project Management
+Strategic Planning
+Market Research
+Business Analysis
+Competitive Analysis
+Sales Forecasting
+Budgeting
+Financial Analysis
+Cost Management
+Revenue Management
+Supply Chain Management
+Operations Management
+Quality Assurance
+Process Improvement
+Lean Six Sigma
+Change Management
+Organizational Development
+Talent Management
